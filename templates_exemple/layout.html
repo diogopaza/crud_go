@@ -1,0 +1,10 @@
+<h1>{{.PageTitle}}</h1>
+<ul>
+    {{range .Todos}}
+     {{if .Done}}
+    <li>{{.Title}}</li>
+        {{else}}
+        <li>Fora variáveis</li>
+        {{end}}
+     {{end}}   
+</ul>

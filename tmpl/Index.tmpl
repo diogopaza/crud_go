@@ -1,0 +1,21 @@
+{{ define "Index"}}
+    <h1>Crud Go - Golang</h1>
+    
+
+    <h1>Usuários Cadastrados</h1>
+
+    <table>
+        <th>Identificador</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Ação</th>
+    {{range .}}
+    <tr>
+        <td>{{.Id}}</td>
+        <td>{{ .Name }}</td>
+        <td>{{.Email}}</td>
+        <td><a href="/edit?id={{ .Id }}">Editar</a></td>
+    </tr>
+
+    </table>
+{{ end }}
